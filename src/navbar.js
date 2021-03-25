@@ -1,38 +1,27 @@
 function createNavBar () {
     let navContainer = document.createElement('nav');
     
-    let homeDiv = document.createElement('div');
-    let homeText = document.createElement('span');
-    homeText.textContent = 'Joao Steak House';
-    homeDiv.appendChild(homeText);
-
-    let contactsDiv = document.createElement('div');
-    let contactsText = document.createElement('span');
-    contactsText.textContent = 'Contacts';
-    contactsDiv.appendChild(contactsText);
-
-    let aboutDiv = document.createElement('div');
-    let aboutText = document.createElement('span');
-    aboutText.textContent = 'About';
-    aboutDiv.appendChild(aboutText);
-
-    let menuDiv = document.createElement('div');
-    let menuText = document.createElement('span');
-    menuText.textContent = 'Menu';
-    menuDiv.appendChild(menuText);
-
-    let galleryDiv = document.createElement('div');
-    let galleryText = document.createElement('span');
-    galleryText.textContent = 'Gallery';
-    galleryDiv.appendChild(galleryText);    
+    let homeDiv = createNavItem('Joao Steak House');
+    let contactsDiv = createNavItem('Contacts');
+    let aboutDiv = createNavItem('About');
+    let menuDiv = createNavItem('Menu');
+    let galleryDiv = createNavItem('Gallery');
 
     navContainer.appendChild(contactsDiv);
-    navContainer.appendChild(aboutText);
+    navContainer.appendChild(aboutDiv);
     navContainer.appendChild(homeDiv);
     navContainer.appendChild(menuDiv);
     navContainer.appendChild(galleryDiv);
 
     return navContainer
+}
+
+function createNavItem (itemTextContent) {
+    let navItem = document.createElement('div');
+    let itemText = document.createElement('span');
+    itemText.textContent = itemTextContent;
+    navItem.appendChild(itemText);
+    return navItem
 }
 
 function loadNavBar () {
