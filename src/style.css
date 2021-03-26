@@ -1,3 +1,31 @@
+/* epilogue-200 - latin */
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 200;
+  src: local(""), url("./fonts/epilogue-v4-latin-200.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/epilogue-v4-latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* epilogue-regular - latin */
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("./fonts/epilogue-v4-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/epilogue-v4-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* epilogue-800 - latin */
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("./fonts/epilogue-v4-latin-800.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/epilogue-v4-latin-800.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 :root {
   --main-color1: #394910;
   --main-color2: #928e45;
@@ -29,6 +57,7 @@
 
 .nav-item {
   color: var(--ligh-color1);
+  font-family: "Epilogue";
   font-weight: 800;
 }
 
