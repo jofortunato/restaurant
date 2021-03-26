@@ -1,0 +1,37 @@
+:root {
+  --main-color1: #394910;
+  --main-color2: #928e45;
+  --main-color3: #f5dc85;
+  --dark-color1: #1f1f1f;
+  --dark-color2: #272727;
+  --ligh-color1: #f7f7f7;
+
+  --small-l1: 6px;
+  --small-l2: 10px;
+  --small-l3: 14;
+
+  --med-l1: 16px;
+  --med-l2: 22px;
+  --med-l3: 28px;
+
+  --large-l1: 40px;
+  --large-l2: 56px;
+  --large-l3: 72px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: var(--med-l3) var(--large-l3);
+  background-color: var(--main-color1);
+}
+
+.nav-item {
+  color: var(--ligh-color1);
+  font-weight: 800;
+}
+
+.nav-item:hover {
+  color: var(--main-color3);
+}
