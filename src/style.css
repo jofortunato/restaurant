@@ -55,3 +55,26 @@ body {
   background-size: cover;
   overflow: auto; /*If problem happens try: scroll.*/
 }
+
+.nav-bar {
+  position: fixed;
+  width: 100vw;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: var(--med-l3) var(--large-l3);
+  background-color: var(--main-color1);
+}
+
+.nav-item {
+  color: var(--ligh-color1);
+  font-family: "Epilogue";
+  font-weight: 800;
+}
+
+.nav-item:hover {
+  color: var(--main-color3);
+}
