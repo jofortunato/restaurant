@@ -36,7 +36,7 @@ function loadNavBar () {
     let navContainer = createNavBar();
 
     contentContainer.appendChild(navContainer);
-    
+
 }
 
 export {loadNavBar}
