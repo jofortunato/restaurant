@@ -36,7 +36,7 @@
 
   --small-l1: 6px;
   --small-l2: 10px;
-  --small-l3: 14;
+  --small-l3: 14px;
 
   --med-l1: 16px;
   --med-l2: 22px;
@@ -65,16 +65,67 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: var(--med-l3) var(--large-l3);
+  /*padding: var(--med-l3) var(--med-l3);*/
+  align-items: center;
+  height: var(--large-l3);
   background-color: var(--main-color1);
+}
+
+#content {
+  padding-top: var(--large-l3);
 }
 
 .nav-item {
   color: var(--ligh-color1);
   font-family: "Epilogue";
   font-weight: 800;
+  font-size: var(--small-l3);
 }
 
 .nav-item:hover {
   color: var(--main-color3);
+}
+
+#home {
+  margin: var(--large-l3) auto 0 auto;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.home-main-title {
+  color: var(--ligh-color1);
+  font-family: "Epilogue";
+  font-weight: 800;
+  font-size: var(--large-l1);
+  margin-bottom: var(--med-l1);
+}
+
+.home-secundary-title {
+  color: var(--main-color3);
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-size: var(--med-l1);
+  margin-bottom: var(--large-l2);
+}
+
+.home-btns-container {
+}
+
+.home-btn {
+  padding: var(--small-l2) var(--small-l3);
+  margin: 0 var(--med-l1);
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-size: var(--small-l3);
+  text-align: center;
+  border-radius: calc((var(--small-l2) * 2 + var(--small-l3)) / 2);
+  outline: none;
+  border: none;
+}
+
+#book-now {
+}
+
+#view-menu {
 }
