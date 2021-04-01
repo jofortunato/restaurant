@@ -47,20 +47,11 @@
   --large-l3: 72px;
 }
 
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: var(--med-l3) var(--large-l3);
-  background-color: var(--main-color1);
-}
-
-.nav-item {
-  color: var(--ligh-color1);
-  font-family: "Epilogue";
-  font-weight: 800;
-}
-
-.nav-item:hover {
-  color: var(--main-color3);
+body {
+  background-image: url(./images/homeBackground.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto; /*If problem happens try: scroll.*/
 }
