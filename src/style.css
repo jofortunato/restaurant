@@ -113,19 +113,37 @@ body {
 }
 
 .home-btn {
-  padding: var(--small-l2) var(--small-l3);
+  padding: var(--small-l2) var(--small-l2);
   margin: 0 var(--med-l1);
   font-family: "Epilogue";
-  font-weight: 400;
+  font-weight: 800;
   font-size: var(--small-l3);
   text-align: center;
-  border-radius: calc((var(--small-l2) * 2 + var(--small-l3)) / 2);
+  border-radius: calc((var(--small-l2) * 2 + var(--small-l3) + 6px) / 2);
   outline: none;
   border: none;
 }
 
 #book-now {
+  background-color: transparent;
+  border: 2px solid var(--main-color2);
+  color: var(--main-color3);
 }
 
 #view-menu {
+  background-color: var(--main-color2);
+  border: 2px solid var(--main-color2);
+  color: var(--ligh-color1);
+}
+
+#book-now:hover {
+  background-color: var(--main-color2);
+  border: 2px solid var(--main-color2);
+  color: var(--ligh-color1);
+}
+
+#view-menu:hover {
+  background-color: transparent;
+  border: 2px solid var(--main-color2);
+  color: var(--main-color3);
 }
