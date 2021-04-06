@@ -6,8 +6,9 @@ import {loadHome} from "./home.js"
 
 (function main () {
     loadNavBar();
-    loadHome();
     addNavEvents();
+    loadHome();
+    addHomeEvents();
 
     
 })();
@@ -26,6 +27,14 @@ function addNavEvents () {
     galleryTab.addEventListener('click', function(){changePage('gallery')});
 }
 
+function addHomeEvents () {
+    const bookNowBtn = document.getElementById('book-now');
+    const viewMenuBtn = document.getElementById('view-menu');
+
+    bookNowBtn.addEventListener('click', function(){changePage('contacts')});
+    viewMenuBtn.addEventListener('click', function(){changePage('menu')});
+}
+
 function changePage(targetPage) {
     let currentPage = document.getElementById('pageContainer');
 
@@ -35,6 +44,7 @@ function changePage(targetPage) {
     
     if (targetPage === 'home') {
         loadHome();
+        addHomeEvents();
     }
     else if (targetPage === 'about') {
         alert('About');
