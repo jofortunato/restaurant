@@ -86,7 +86,7 @@ body {
   color: var(--main-color3);
 }
 
-#home {
+.home {
   margin: var(--large-l3) auto 0 auto;
   width: 80%;
   max-width: 400px;
@@ -107,9 +107,6 @@ body {
   font-weight: 400;
   font-size: var(--med-l1);
   margin-bottom: var(--large-l2);
-}
-
-.home-btns-container {
 }
 
 .home-btn {

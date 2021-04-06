@@ -28,7 +28,8 @@ function createHome () {
     homeContainer.appendChild(secundaryTitle);
     homeContainer.appendChild(buttonsContainer);
 
-    homeContainer.id = 'home'
+    homeContainer.id = 'pageContainer';
+    homeContainer.classList.add('home');
     return homeContainer
 }
 
@@ -41,9 +42,4 @@ function loadHome () {
 
 }
 
-function deleteHome() {
-    let homeContainer = document.getElementById('home');
-    homeContainer.remove();
-}
-
-export {loadHome, deleteHome}
+export {loadHome}

@@ -1,11 +1,11 @@
 function createNavBar () {
     let navContainer = document.createElement('nav');
     
-    let homeDiv = createNavItem('Joao Steak House', ["nav-item"]);
-    let contactsDiv = createNavItem('Contacts', ["nav-item"]);
-    let aboutDiv = createNavItem('About', ["nav-item"]);
-    let menuDiv = createNavItem('Menu', ["nav-item"]);
-    let galleryDiv = createNavItem('Gallery', ["nav-item"]);
+    let homeDiv = createNavItem('Joao Steak House', ["nav-item"], 'homeTab');
+    let contactsDiv = createNavItem('Contacts', ["nav-item"], 'contactsTab');
+    let aboutDiv = createNavItem('About', ["nav-item"], 'aboutTab');
+    let menuDiv = createNavItem('Menu', ["nav-item"], 'menuTab');
+    let galleryDiv = createNavItem('Gallery', ["nav-item"], 'galleryTab');
 
     navContainer.appendChild(contactsDiv);
     navContainer.appendChild(aboutDiv);
@@ -17,7 +17,7 @@ function createNavBar () {
     return navContainer
 }
 
-function createNavItem (itemTextContent, itemClasses = []) {
+function createNavItem (itemTextContent, itemClasses = [], itemID) {
     let navItem = document.createElement('div');
     let itemText = document.createElement('span');
     itemText.textContent = itemTextContent;
@@ -26,6 +26,8 @@ function createNavItem (itemTextContent, itemClasses = []) {
     if (itemClasses.length !== 0) {
         navItem.classList.add(...itemClasses);
     }
+
+    navItem.id = itemID;
 
     return navItem
 }
