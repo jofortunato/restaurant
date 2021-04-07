@@ -3,6 +3,7 @@ import './style.css';
 
 import {loadNavBar} from "./navbar.js"
 import {loadHome} from "./home.js"
+import {loadAbout} from "./about.js"
 
 (function main () {
     loadNavBar();
@@ -47,7 +48,7 @@ function changePage(targetPage) {
         addHomeEvents();
     }
     else if (targetPage === 'about') {
-        alert('About');
+        loadAbout();
     }
     else if (targetPage === 'contacts') {
         alert('Contacts');
