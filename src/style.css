@@ -144,3 +144,29 @@ body {
   border: 2px solid var(--main-color2);
   color: var(--main-color3);
 }
+
+.about {
+  width: 80%;
+  max-width: 600px;
+  margin: var(--large-l3) auto 0 auto;
+  padding: var(--med-l3);
+  background-color: rgba(57, 73, 16, 0.5);
+  border-radius: var(--small-l2);
+}
+
+.about-main-title {
+  text-align: center;
+  color: var(--ligh-color1);
+  font-family: "Epilogue";
+  font-weight: 800;
+  font-size: var(--med-l3);
+  margin-bottom: var(--small-l3);
+}
+
+.about-text {
+  text-align: justify;
+  color: var(--main-color3);
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-size: var(--med-l1);
+}
