@@ -152,6 +152,7 @@ body {
   padding: var(--med-l3);
   background-color: rgba(57, 73, 16, 0.5);
   border-radius: var(--small-l2);
+  box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.4);
 }
 
 .about-main-title {
@@ -169,4 +170,5 @@ body {
   font-family: "Epilogue";
   font-weight: 400;
   font-size: var(--med-l1);
+  line-height: var(--med-l2);
 }
