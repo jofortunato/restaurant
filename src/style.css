@@ -80,6 +80,7 @@ body {
   font-family: "Epilogue";
   font-weight: 800;
   font-size: var(--small-l3);
+  cursor: pointer;
 }
 
 .nav-item:hover {
@@ -119,6 +120,7 @@ body {
   border-radius: calc((var(--small-l2) * 2 + var(--small-l3) + 6px) / 2);
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 #book-now {
