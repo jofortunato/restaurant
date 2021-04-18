@@ -5,10 +5,17 @@ function createGallery () {
     imagesContainer.id = 'images-container';
     imagesContainer.classList.add('gallery');
     
+    let cell
     let imageContainer
+    let image
     for (let i = 0; i < 24; ++i) {
-        imageContainer = createImage(['image'], `image${i}`);
-        imagesContainer.appendChild(imageContainer);
+        cell = createImage(['image-cell'], `image-cell-${i}`);
+        cell = createImage(['cell'], `cell-${i}`);
+        imageContainer = createImage(['image-container'], `image-container-${i}`);
+        image = createImage(['image'], `image-${i}`);
+        imageContainer.appendChild(image);
+        cell.appendChild(imageContainer);
+        imagesContainer.appendChild(cell);
     }
     
     galleryContainer.appendChild(imagesContainer);

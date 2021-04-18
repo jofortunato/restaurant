@@ -174,3 +174,109 @@ body {
   font-size: var(--med-l1);
   line-height: var(--med-l2);
 }
+
+.gallery-background {
+  width: 90%;
+  max-width: 1200px;
+  margin: var(--large-l3) auto 0 auto;
+  background-color: rgba(57, 73, 16, 0.5);
+  border-radius: var(--small-l2);
+  box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.4);
+}
+
+.gallery {
+  padding: var(--med-l3) 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: 25%;
+}
+
+.image-container {
+  padding: var(--med-l1);
+}
+
+.image {
+  background-color: red;
+  height: 180px;
+  background-size: cover;
+}
+
+#image-0 {
+  background-image: url(./images/homeBackground.jpg);
+}
+
+#image-1 {
+}
+
+#image-2 {
+}
+
+#image-3 {
+}
+
+#image-4 {
+}
+
+#image-5 {
+}
+
+#image-6 {
+}
+
+#image-7 {
+}
+
+#image-8 {
+}
+
+#image-9 {
+}
+
+#image-10 {
+}
+
+#image-11 {
+}
+
+#image-12 {
+}
+
+#image-13 {
+}
+
+#image-14 {
+}
+
+#image-15 {
+}
+
+#image-16 {
+}
+
+#image-17 {
+}
+
+#image-18 {
+}
+
+#image-19 {
+}
+
+#image-20 {
+}
+
+#image-21 {
+}
+
+#image-22 {
+}
+
+#image-23 {
+}
+
+#image-24 {
+}
