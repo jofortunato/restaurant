@@ -174,3 +174,23 @@ body {
   font-size: var(--med-l1);
   line-height: var(--med-l2);
 }
+
+.gallery {
+  display: grid;
+  column-gap: var(--med-l2);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  width: 95%;
+  max-width: 1296px;
+  margin: var(--large-l3) auto var(--large-l3) auto;
+}
+
+.gallery-column {
+  display: grid;
+  row-gap: var(--med-l2);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.gallery-image {
+  width: 100%;
+}
