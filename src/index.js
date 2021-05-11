@@ -4,6 +4,7 @@ import './style.css';
 import {loadNavBar} from "./navbar.js"
 import {loadHome} from "./home.js"
 import {loadAbout} from "./about.js"
+import {loadGallery} from './gallery.js'
 
 (function main () {
     loadNavBar();
@@ -54,7 +55,7 @@ function changePage(targetPage) {
         alert('Contacts');
     }
     else if (targetPage === 'gallery') {
-        alert('Gallery');
+        loadGallery();
     }
     else if (targetPage === 'menu') {
         alert('Menu');
