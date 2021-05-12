@@ -12,13 +12,13 @@ Part of my journey learning to create web apps. This part of the [The Odin Proje
 
 ### To-do:
 
-- [ ] Create the navigation header;
-- [ ] Setup the tab switching logic;
-- [ ] Create the Homepage;
-- [ ] Create the function to wipe out all content from the page;
-- [ ] Create the About page;
+- [x] Create the navigation header;
+- [x] Setup the tab switching logic;
+- [x] Create the Homepage;
+- [x] Create the function to wipe out all content from the page;
+- [x] Create the About page;
 - [ ] Create the Menu page;
-- [ ] Create the Gallery page;
+- [x] Create the Gallery page;
 - [ ] Create the Contacts page.
 
 ## Bugs, Advices and Lessons Learned
