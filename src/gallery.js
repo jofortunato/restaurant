@@ -96,9 +96,21 @@ function createFigure (figure) {
 
         let ghostDiv = document.createElement('div');
         ghostDiv.classList.add('ghost');
+        ghostDiv.id = 'full-size-image';
+
+        ghostDiv.appendChild(maximizeFigure);
+
+        let exitBtn = document.createElement('div');
+        exitBtn.classList.add('exit-btn');
+
+        exitBtn.addEventListener('click', () => {
+            let fullSizeDiv = document.getElementById('full-size-image');
+            fullSizeDiv.remove();
+        }, false);
+
+        ghostDiv.appendChild(exitBtn);
 
         let contentContainer = document.getElementById('content');
-        ghostDiv.appendChild(maximizeFigure);
         contentContainer.appendChild(ghostDiv);
         
     }, false);

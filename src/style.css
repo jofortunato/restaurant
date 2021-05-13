@@ -195,10 +195,14 @@ body {
   width: 100%;
 }
 
+.gallery-image:hover {
+  cursor: pointer;
+}
+
 .full-image {
   max-width: 800px;
   width: 80%;
-  margin: 140px 0;
+  margin: 140px auto;
 }
 
 .ghost {
@@ -211,4 +215,10 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
+}
+
+.exit-btn {
+  width: 20px;
+  height: 20px;
+  background-color: red;
 }
