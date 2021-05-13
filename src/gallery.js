@@ -89,6 +89,20 @@ function createFigure (figure) {
     figureElement.classList.add('gallery-image');
     figureElement.src = figure
 
+    figureElement.addEventListener('click', () => {
+        let maximizeFigure = document.createElement('img');
+        maximizeFigure.classList.add('full-image');
+        maximizeFigure.src = figure
+
+        let ghostDiv = document.createElement('div');
+        ghostDiv.classList.add('ghost');
+
+        let contentContainer = document.getElementById('content');
+        ghostDiv.appendChild(maximizeFigure);
+        contentContainer.appendChild(ghostDiv);
+        
+    }, false);
+
     return figureElement    
 }
 
