@@ -202,6 +202,8 @@ body {
 .full-image {
   max-width: 800px;
   width: 80%;
+  height: 70%;
+  object-fit: contain;
   margin: 140px auto;
 }
 
@@ -218,6 +220,9 @@ body {
 }
 
 .exit-btn {
+  position: absolute;
+  right: 5%;
+  top: var(--large-l3);
   width: 20px;
   height: 20px;
   background-color: red;
