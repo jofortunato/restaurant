@@ -150,6 +150,9 @@ body {
 .about {
   width: 80%;
   max-width: 600px;
+}
+
+.main-text-cointainer {
   margin: var(--large-l3) auto 0 auto;
   padding: var(--med-l3);
   background-color: rgba(57, 73, 16, 0.5);
@@ -157,7 +160,7 @@ body {
   box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.4);
 }
 
-.about-main-title {
+.text-main-title {
   text-align: center;
   color: var(--ligh-color1);
   font-family: "Epilogue";
