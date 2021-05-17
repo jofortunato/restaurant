@@ -150,6 +150,9 @@ body {
 .about {
   width: 80%;
   max-width: 600px;
+}
+
+.main-text-cointainer {
   margin: var(--large-l3) auto 0 auto;
   padding: var(--med-l3);
   background-color: rgba(57, 73, 16, 0.5);
@@ -157,7 +160,7 @@ body {
   box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.4);
 }
 
-.about-main-title {
+.text-main-title {
   text-align: center;
   color: var(--ligh-color1);
   font-family: "Epilogue";
@@ -175,108 +178,59 @@ body {
   line-height: var(--med-l2);
 }
 
-.gallery-background {
-  width: 90%;
-  max-width: 1200px;
-  margin: var(--large-l3) auto 0 auto;
-  background-color: rgba(57, 73, 16, 0.5);
-  border-radius: var(--small-l2);
-  box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.4);
-}
-
 .gallery {
-  padding: var(--med-l3) 0;
+  display: grid;
+  column-gap: var(--med-l2);
+  grid-template-columns: repeat(var(--number-columns), minmax(0, 1fr));
+  align-items: start;
+  width: 95%;
+  max-width: 1296px;
+  margin: var(--large-l3) auto var(--large-l3) auto;
+}
+
+.gallery-column {
+  display: grid;
+  row-gap: var(--med-l2);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.gallery-image {
+  width: 100%;
+}
+
+.gallery-image:hover {
+  cursor: pointer;
+}
+
+.full-image {
+  max-width: 800px;
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  margin: 140px auto;
+}
+
+.ghost {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-.cell {
-  width: 25%;
+.exit-btn {
+  position: absolute;
+  right: 5%;
+  top: var(--large-l3);
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width= '24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f7f7f7' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
 }
 
-.image-container {
-  padding: var(--med-l1);
-}
-
-.image {
-  background-color: red;
-  height: 180px;
-  background-size: cover;
-}
-
-#image-0 {
-  background-image: url(./images/homeBackground.jpg);
-}
-
-#image-1 {
-}
-
-#image-2 {
-}
-
-#image-3 {
-}
-
-#image-4 {
-}
-
-#image-5 {
-}
-
-#image-6 {
-}
-
-#image-7 {
-}
-
-#image-8 {
-}
-
-#image-9 {
-}
-
-#image-10 {
-}
-
-#image-11 {
-}
-
-#image-12 {
-}
-
-#image-13 {
-}
-
-#image-14 {
-}
-
-#image-15 {
-}
-
-#image-16 {
-}
-
-#image-17 {
-}
-
-#image-18 {
-}
-
-#image-19 {
-}
-
-#image-20 {
-}
-
-#image-21 {
-}
-
-#image-22 {
-}
-
-#image-23 {
-}
-
-#image-24 {
+.exit-btn:hover {
+  cursor: pointer;
 }

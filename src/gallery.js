@@ -1,39 +1,121 @@
 function createGallery () {
     let galleryContainer = document.createElement('div');
-
-    let imagesContainer = document.createElement('div');
-    imagesContainer.id = 'images-container';
-    imagesContainer.classList.add('gallery');
-    
-    let cell
-    let imageContainer
-    let image
-    for (let i = 0; i < 24; ++i) {
-        cell = createImage(['image-cell'], `image-cell-${i}`);
-        cell = createImage(['cell'], `cell-${i}`);
-        imageContainer = createImage(['image-container'], `image-container-${i}`);
-        image = createImage(['image'], `image-${i}`);
-        imageContainer.appendChild(image);
-        cell.appendChild(imageContainer);
-        imagesContainer.appendChild(cell);
-    }
-    
-    galleryContainer.appendChild(imagesContainer);
     galleryContainer.id = 'pageContainer';
-    galleryContainer.classList.add('gallery-background');
+    galleryContainer.classList.add('gallery');
+
+    let imageCache = {};
+    function importAll(r) {
+        r.keys().forEach((key, index) => {
+
+            imageCache[index] = r(key)
+        });
+    }
+    importAll(require.context('./images/gallery', false, /\.(png|jpe?g|svg)$/));
+
+    let totalImages = 24;
+    let gridLayout = getNumberOfColumns(totalImages);
+
+    galleryContainer = addColumns(galleryContainer, gridLayout, imageCache);
+
+    window.addEventListener('resize', () => {
+        let totalImages = 24;
+        let newGridLayout = getNumberOfColumns(totalImages);
+
+        let existingColumns = document.getElementsByClassName('gallery-column');
+
+        if (newGridLayout.numberOfColumns !== existingColumns.length) {
+
+            let gallery = document.getElementById('pageContainer');
+            gallery.remove();
+
+            let newGalleryContainer = document.createElement('div');
+            newGalleryContainer.id = 'pageContainer';
+            newGalleryContainer.classList.add('gallery');
+
+            newGalleryContainer = addColumns(newGalleryContainer,newGridLayout,imageCache);
+            let contentContainer = document.getElementById('content');
+            contentContainer.appendChild(newGalleryContainer);
+        }
+    }, false);
+
     return galleryContainer
 }
 
-function createImage (itemClasses = [], itemID) {
-    let imageItem = document.createElement('div');
+function getNumberOfColumns (numberOfImages) {
+    let numberOfColumns;
+    let imagesPerColumn;
 
-    if (itemClasses.length !== 0) {
-        imageItem.classList.add(...itemClasses);
+    if (window.innerWidth < 480) {
+        numberOfColumns = 1;
+    }
+    else if (window.innerWidth < 768) {
+        numberOfColumns = 2;
+    }
+    else {
+        numberOfColumns = 3;
     }
 
-    imageItem.id = itemID;
+    imagesPerColumn = numberOfImages/numberOfColumns;
 
-    return imageItem
+    return {numberOfColumns, imagesPerColumn};
+}
+
+function addColumns (galleryContainer, gridLayout, imageCache) {
+    for (let i = 0; i < gridLayout.numberOfColumns; ++i) {
+        let column = createColumn(i, gridLayout.imagesPerColumn, imageCache);
+        galleryContainer.appendChild(column);
+    }
+
+    galleryContainer.style = `--number-columns: ${gridLayout.numberOfColumns};`
+
+    return galleryContainer
+}
+
+function createColumn (columnNumber, imagesPerColumn, imageCache) {
+    let galleryColumn = document.createElement('div');
+    galleryColumn.classList.add('gallery-column');
+    galleryColumn.id = `column-${columnNumber}`;
+
+    for (let i = 0; i < imagesPerColumn; ++i) {
+        let figureElement = createFigure(imageCache[i+imagesPerColumn*columnNumber]);
+        galleryColumn.appendChild(figureElement);
+    }
+
+    return galleryColumn
+}
+
+function createFigure (figure) {
+    let figureElement = document.createElement('img');
+    figureElement.classList.add('gallery-image');
+    figureElement.src = figure
+
+    figureElement.addEventListener('click', () => {
+        let maximizeFigure = document.createElement('img');
+        maximizeFigure.classList.add('full-image');
+        maximizeFigure.src = figure
+
+        let ghostDiv = document.createElement('div');
+        ghostDiv.classList.add('ghost');
+        ghostDiv.id = 'full-size-image';
+
+        ghostDiv.appendChild(maximizeFigure);
+
+        let exitBtn = document.createElement('div');
+        exitBtn.classList.add('exit-btn');
+
+        exitBtn.addEventListener('click', () => {
+            let fullSizeDiv = document.getElementById('full-size-image');
+            fullSizeDiv.remove();
+        }, false);
+
+        ghostDiv.appendChild(exitBtn);
+
+        let contentContainer = document.getElementById('content');
+        contentContainer.appendChild(ghostDiv);
+        
+    }, false);
+
+    return figureElement    
 }
 
 function loadGallery () {
@@ -45,4 +127,4 @@ function loadGallery () {
 
 }
 
-export {loadGallery}
+export {loadGallery} 
