@@ -32,7 +32,7 @@
   --main-color3: #f5dc85;
   --dark-color1: #1f1f1f;
   --dark-color2: #272727;
-  --ligh-color1: #f7f7f7;
+  --light-color1: #f7f7f7;
 
   --small-l1: 6px;
   --small-l2: 10px;
@@ -76,7 +76,7 @@ body {
 }
 
 .nav-item {
-  color: var(--ligh-color1);
+  color: var(--light-color1);
   font-family: "Epilogue";
   font-weight: 800;
   font-size: var(--small-l3);
@@ -95,7 +95,7 @@ body {
 }
 
 .home-main-title {
-  color: var(--ligh-color1);
+  color: var(--light-color1);
   font-family: "Epilogue";
   font-weight: 800;
   font-size: var(--large-l1);
@@ -132,13 +132,13 @@ body {
 #view-menu {
   background-color: var(--main-color2);
   border: 2px solid var(--main-color2);
-  color: var(--ligh-color1);
+  color: var(--light-color1);
 }
 
 #book-now:hover {
   background-color: var(--main-color2);
   border: 2px solid var(--main-color2);
-  color: var(--ligh-color1);
+  color: var(--light-color1);
 }
 
 #view-menu:hover {
@@ -162,7 +162,7 @@ body {
 
 .text-main-title {
   text-align: center;
-  color: var(--ligh-color1);
+  color: var(--light-color1);
   font-family: "Epilogue";
   font-weight: 800;
   font-size: var(--med-l3);
@@ -233,4 +233,49 @@ body {
 
 .exit-btn:hover {
   cursor: pointer;
+}
+
+.menu {
+  width: fit-content;
+  max-width: 1296px;
+}
+
+#menu-field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.type-cont {
+  margin: var(--med-l2);
+  width: 180px;
+}
+
+.type-title {
+  width: 100%;
+  color: var(--main-color3);
+  font-family: "Epilogue";
+  font-weight: 800;
+  font-size: var(--med-l2);
+  line-height: var(--med-l2);
+  border-bottom: 2px solid var(--main-color3);
+  margin-bottom: var(--small-l3);
+}
+
+.group-dishes {
+  color: var(--light-color1);
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-size: var(--med-l1);
+  line-height: var(--med-l2);
+}
+
+.dish-name {
+  margin-bottom: var(--small-l2);
 }
