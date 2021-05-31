@@ -1,8 +1,8 @@
 function createMenu () {
-    let entries = ['Pão', 'Azeitonas'];
-    let mains = ['Bife', 'Picanha', 'Bitoque'];
-    let desserts = ['Leite Creme', 'Baba de Camelo'];
-    let drinks = ['Água', 'Cerveja', 'Vinho'];
+    let entries = ['Bread and Olives', 'Artisanal Goat Cheese', 'Beef Flat Ribs', 'Padrón Peppers', 'Joaos Croquette'];
+    let mains = ['Black Angus Ribeye', 'Filet Mignon', 'Sirloin', 'Joaos Steak', 'Magret with Porto', 'Ribeye', 'New York Steak', 'Wagyu Sirloin', 'Grilled Octopus Legs'];
+    let desserts = ['Apple Crumble', 'Cheesecake', ''];
+    let drinks = ['Vallado', 'Beyra', 'Duvel', 'Chimay Blue', 'Pauwel Kwak', 'Leffe Blonde', 'Gin Mare', 'Martin Millers', 'Martini Rosso'];
 
     let menuContainer = document.createElement('div');
     menuContainer.id = 'pageContainer';
