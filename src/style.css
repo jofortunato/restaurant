@@ -238,6 +238,7 @@ body {
 .menu {
   width: fit-content;
   max-width: 1296px;
+  margin-bottom: var(--med-l3);
 }
 
 #menu-field {
