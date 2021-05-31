@@ -17,7 +17,7 @@ Part of my journey learning to create web apps. This part of the [The Odin Proje
 - [x] Create the Homepage;
 - [x] Create the function to wipe out all content from the page;
 - [x] Create the About page;
-- [ ] Create the Menu page;
+- [x] Create the Menu page;
 - [x] Create the Gallery page;
 - [ ] Create the Contacts page.
 
