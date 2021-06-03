@@ -280,3 +280,18 @@ body {
 .dish-name {
   margin-bottom: var(--small-l2);
 }
+
+.contacts {
+  margin: var(--large-l3) 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.contacts-div {
+  width: 500px;
+  height: 500px;
+  border: 1px dashed var(--main-color3);
+  margin: 0 var(--med-l2);
+}
