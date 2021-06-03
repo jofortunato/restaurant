@@ -290,8 +290,13 @@ body {
 }
 
 .contacts-div {
-  width: 500px;
-  height: 500px;
-  border: 1px dashed var(--main-color3);
-  margin: 0 var(--med-l2);
+  max-width: 500px;
+  width: 80vw;
+  margin: var(--med-l2) var(--med-l2);
+}
+
+.contacts-div:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }

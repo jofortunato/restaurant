@@ -8,7 +8,8 @@ function createContacts () {
 
     let rhDiv = document.createElement('div');
     rhDiv.classList.add('phone-address');
-    rhDiv.classList.add('contacts-div')
+    rhDiv.classList.add('contacts-div');
+    rhDiv.classList.add('main-text-cointainer');
     rhDiv.id = 'rh-contact';
 
     contactsContainer.appendChild(lhDiv);
