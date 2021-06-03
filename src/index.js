@@ -7,6 +7,7 @@ import {loadAbout} from './about.js'
 import {loadGallery} from './gallery.js'
 import {loadMenu} from './menu.js'
 import {loadContacts} from './contacts.js'
+import {initMap} from './map.js'
 
 (function main () {
     loadNavBar();
@@ -55,6 +56,7 @@ function changePage(targetPage) {
     }
     else if (targetPage === 'contacts') {
         loadContacts();
+        initMap();
     }
     else if (targetPage === 'gallery') {
         loadGallery();

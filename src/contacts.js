@@ -16,7 +16,8 @@ function createContacts () {
 
     contactsContainer.id = 'pageContainer';
     contactsContainer.classList.add('contacts');
-    return contactsContainer
+
+    return contactsContainer;
 }
 
 function loadContacts () {
